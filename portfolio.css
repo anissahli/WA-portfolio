@@ -1,0 +1,11 @@
+#container{
+    margin:30px
+}
+
+h1, p{
+    text-align: center;
+}
+
+button{
+    width:100%;
+}
