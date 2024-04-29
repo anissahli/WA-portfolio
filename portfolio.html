@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Web Advanced</title>
+    <title>Triviatainment</title>
     <link rel="stylesheet" href="portfolio.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -14,11 +14,11 @@
     <h1>Triviatainment</h1>
     <p>Welcome to Triviatainment! With our interactive quiz creation tool, you can tailor-make quizzes on topics ranging from pop culture to science, or delve into our vast repository of pre-made quizzes covering a wide array of subjects.  </p>
     <div id="container">
-        <form>
+        <form id="form">
             <div class="row mb-3">
-                <label for="quizName" class="col-sm-2 col-form-label">Quizname</label>
+                <label for="quizname" class="col-sm-2 col-form-label">Quizname</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="quizName" placeholder="The million-dollar question(s)">
+                    <input type="text" class="form-control" id="quizname" placeholder="The million-dollar question(s)">
                 </div>
             </div>
             <div class="row mb-3">
@@ -31,20 +31,19 @@
                 <legend class="col-form-label col-sm-2 pt-0">Difficulty</legend>
                 <div class="col-sm-10">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="difficulty" id="difficulty1" value="easy"
-                            checked>
+                        <input class="form-check-input difficulty" type="radio" name="difficulty" id="difficulty1" value="easy" checked>
                         <label class="form-check-label" for="difficulty1">
                             Easy
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="difficulty" id="difficulty2" value="medium">
+                        <input class="form-check-input difficulty" type="radio" name="difficulty" id="difficulty2" value="medium">
                         <label class="form-check-label" for="difficulty2">
                             Medium
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="difficulty" id="difficulty3" value="hard">
+                        <input class="form-check-input difficulty" type="radio" name="difficulty" id="difficulty3" value="hard">
                         <label class="form-check-label" for="difficulty3">
                             Hard
                         </label>
@@ -59,42 +58,52 @@
                         </label>
                     </div>
                     <div class="col-sm-10">
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select" aria-label="Default select example" id="category">
                             <option selected>General Knowledge</option>
-                            <option value="1">Books</option>
-                            <option value="2">Movies</option>
-                            <option value="3">Music</option>
-                            <option value="3">Art</option>
-                            <option value="3">History</option>
-                            <option value="3">Religion</option>
-                            <option value="3">Geography</option>
-                            <option value="3">Celebrities</option>
-                            <option value="3">Vehicles</option>
-                            <option value="3">Personal life</option>
+                            <option>Books</option>
+                            <option>Movies</option>
+                            <option>Music</option>
+                            <option>Art</option>
+                            <option>History</option>
+                            <option>Sports</option>
+                            <option>Geography</option>
+                            <option>Celebrities</option>
+                            <option>Vehicles</option>
+                            <option>Personal life</option>
                         </select>
                     </div>
             </div>
 
-
-
-                <div class="row mb-3">
-                    <div class="col-sm-10 offset-sm-2">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck1">
-                            <label class="form-check-label" for="gridCheck1">
-                                Example checkbox
-                            </label>
-                        </div>
+            <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-2 pt-0">Method</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input method" type="radio" name="method" value="preMade" id="preMade" checked>
+                        <label class="form-check-label" for="preMade">
+                           I want a pre-made quiz.
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input method" type="radio" name="method" value="tailorMake" id="tailorMake">
+                        <label class="form-check-label" for="tailorMake">
+                            I want to create my own quiz. 
+                        </label>
                     </div>
                 </div>
-                               
-                <button type="submit" class="btn btn-primary">Tailor-make quiz</button>
-                <p>or</p>
-                <button type="submit" class="btn btn-primary">Pre-made quiz</button>
+            </fieldset>
+                          
+         
+                <button id="button" type="submit">Let the fun begin!</button>
+                
             
         </form>
     </div>
 
+    <footer>
+        <hr>
+        <p>Portfolio Web Advanced</p>
+        <p>&copy; Sahli Anissa - TI1</p>
+    </footer>
 
 
 
