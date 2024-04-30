@@ -16,7 +16,8 @@ form.addEventListener('submit',function(e){
     let difficulty= document.querySelector('fieldset .difficulty:checked').value
     let category=document.getElementById('category').value;
 
-    [9,10,11,12,25,23,21,22]=["General Knowledge","Books","Movies","Music","Art","Sports","Geography"]
+
+
     let method= document.querySelector('fieldset .method:checked').value
 
     console.log(quizname+questionNumber+difficulty+category+method)
